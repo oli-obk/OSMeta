@@ -1,0 +1,2 @@
+[target.aarch64-linux-android.openxr_loader]
+rustc-link-search = ["runtime_libs/arm64-v8a"]

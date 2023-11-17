@@ -14,7 +14,8 @@ use bevy_oxr::DefaultXrPlugins;
 mod tilemap;
 mod xr;
 
-fn main() {
+#[bevy_main]
+pub fn main() {
     let mut app = App::new();
     if std::env::args().any(|arg| arg == "xr") {
         app.add_plugins(DefaultXrPlugins).add_plugins(XRPlugin);
