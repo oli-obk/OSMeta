@@ -42,6 +42,9 @@ jobs:
       - name: Install wasm libcore/libstd
         if: matrix.os == 'ubuntu-latest'
         run: rustup target install wasm32-unknown-unknown
+      - name: Install wasm-bindgen
+        if: matrix.os == 'ubuntu-latest'
+        run: cargo install wasm-bindgen-cli
       - name: Build wasm
         if: matrix.os == 'ubuntu-latest'
         run: cargo build --release --target wasm32-unknown-unknown --bin demo && wasm-bindgen --out-dir ./web/ --target web ./target/wasm32-unknown-unknown/release/demo.wasm  

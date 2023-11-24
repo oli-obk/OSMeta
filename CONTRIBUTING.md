@@ -19,5 +19,4 @@ To run the project in the browser locally, you need to do the following setup:
 rustup target install wasm32-unknown-unknown
 cargo install wasm-server-runner
 cargo run --target wasm32-unknown-unknown
-
 ```
